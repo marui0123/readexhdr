@@ -1,5 +1,5 @@
 TARGET		:= 	$(notdir $(CURDIR))
-INCLUDES	:= 	-I$(CTRULIB)/include
+INCLUDES	:= 	-I$(DEVKITPRO)/libctru/include
 
 CFLAGS		:=	$(INCLUDES)
 
@@ -8,7 +8,7 @@ CFLAGS		:=	$(INCLUDES)
 all:	$(TARGET)
 
 $(TARGET):	readexhdr.c
-	$(CC) $(CFLAGS) -o $(TARGET)
+	$(CC) $< $(CFLAGS) -o $(TARGET)
 
 clean:
 	@echo clean ...
