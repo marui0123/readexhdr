@@ -12,7 +12,7 @@ main (int argc, char **argv)
 	struct stat stat_buf;
 	char *head;
 	ExHeader *exhdr;
-	
+
 	if (argc < 2)
 	{
 		fprintf (stderr, "Too few argments\n");
@@ -20,7 +20,7 @@ main (int argc, char **argv)
 	}
 
 	int fd = open (argv[1], O_RDONLY);
-	
+
 	if (fd < 0)
 	{
 		fprintf (stderr, "Failed to open the file\n");
@@ -39,7 +39,7 @@ main (int argc, char **argv)
 	ExHeader_CodeSectionInfo *rodata = &codeset_info->rodata;
 	ExHeader_CodeSectionInfo *data = &codeset_info->data;
 
-	u32 total = text->size + rodata->size + data->size;
+	// u32 total = text->size + rodata->size + data->size;
 
 	puts	("    Name        Address     Size");
 	printf	("    text        %08x    %08x\n", text->address, text->size);

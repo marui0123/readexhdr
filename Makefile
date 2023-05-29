@@ -1,7 +1,7 @@
 TARGET		:= 	$(notdir $(CURDIR))
 INCLUDES	:= 	-I$(DEVKITPRO)/libctru/include
 
-CFLAGS		:=	$(INCLUDES)
+CFLAGS		:=	$(INCLUDES) -Wall -Wextra
 
 .PHONY:	clean all
 
